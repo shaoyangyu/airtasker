@@ -7,22 +7,36 @@ Things you may want to cover:
 
 * Ruby version
 
+ruby 2.3.4
+
 * System dependencies
+
+docker： 17.06.1-ce
+docker-compose: 1.12.0
 
 * Configuration
 
 * Database creation
 
+```
+rake db:create && rake db:migrate
+```
+
 * Database initialization
+
+```
+rake db:setup
+```
 
 * How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+rspec
+```
 
-* Deployment instructions
+* Start app
 
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+```
+bundle install
+rake docker:run
+```
