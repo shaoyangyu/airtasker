@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  app:
+    image: airtasker:${TAG}
+    environment:
+      - RAILS_ENV=development
+    volumes:
+    - ../:/usr/src/app
+ 
+    ports:
+    - 3000:3000/tcp
+    command: bash -c "tail -f /dev/null"

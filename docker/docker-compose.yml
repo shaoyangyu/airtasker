@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  app:
+    image: docker.io/shaoyang/airtasker:${TAG}
+    environment:
+      - RAILS_ENV=production
+      - SECRET_KEY_BASE=882e5ebf7a67750ab15d638866fc1034c618f394ab8b9cf4e217bf1b27e74153f469b2d1a2408a09e0b8cf1edad6b2b14adf0adc9ac085c8c5d12f861a7ceb15
+    ports:
+    - 3000:3000/tcp

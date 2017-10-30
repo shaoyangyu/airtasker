@@ -1,0 +1,17 @@
+{
+  "base_name": "shaoyang/ruby:alpine",
+  "author": "ShaoYang",
+  "docker_repo": "docker.io/shaoyang",
+  "image_name": "airtasker",
+  "service_name": "app",
+  "debug_yml": "docker/docker-compose.debug.yml",
+  "prod_yml": "docker/docker-compose.yml",
+  "docker_file": "docker/Dockerfile",
+  "docker_parse": "docker/.docker_parse.json",
+  "test_command": "bash -c 'RAILS_ENV=test bundle exec rspec --format documentation'",
+  "up_command": "rake db:migrate&&bundle exec rails s -b 0.0.0.0",
+  "lint_command": "rubocop -a",
+  "shell_command": "/bin/bash",
+  "package_command": "bundle package",
+  "db_type": "mongo"
+}
